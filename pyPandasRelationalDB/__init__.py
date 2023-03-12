@@ -1,0 +1,1 @@
+from pyPandasRelationalDB.manager import Manager
