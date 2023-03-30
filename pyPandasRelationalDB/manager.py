@@ -32,7 +32,7 @@ class Manager:
         elif self.engine_type == 'sqlite':
             return f"sqlite:///{self.database}"
         elif self.engine_type == 'oracle':
-            return f"oracle://{self.username}:{self.password}@{self.host}:{self.port}/{self.database}"
+            return f'oracle+cx_oracle://{self.username}:{self.password}@{self.host}:{self.port}/?service_name={self.database}'
         elif self.engine_type == 'mssql':
             return f"mssql+pymssql://{self.username}:{self.password}@{self.host}:{self.port}/{self.database}"
         else:
